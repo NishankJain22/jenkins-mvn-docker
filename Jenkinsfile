@@ -28,7 +28,8 @@ node{
 				 sh "docker login -u suhvas -p ${dockerhubaccount}"
 				}
 				//sh 'docker push suhvas/suhas-pridevops:0.1.0'
-				sh "docker build ${ImageName}:${imageTag}"
+				//sh "docker build ${ImageName}:${imageTag}"
+			        sh "docker push ${ImageName}:${imageTag}"
 				//sh 'docker rmi suhvas/suhas-pridevops:0.1.0'
 				//sh "docker rmi -t ${ImageName}:${imageTag}"
 		  //}
