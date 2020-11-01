@@ -1,5 +1,4 @@
 node{
-  def Namespace = "pkapp"
   def ImageName = "suhvas/suhas-pridevops"
   def Creds	= "dockerhubaccount"
   def imageTag = "1.0"
