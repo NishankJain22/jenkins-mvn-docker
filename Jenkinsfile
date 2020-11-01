@@ -16,8 +16,9 @@ node{
 		 // }
 		stage('Docker Build, Push'){
 			withDockerRegistry([credentialsId: "${Creds}", url: 'https://index.docker.io/v1/']) {
-			  sh "docker build -t ${ImageName}:${imageTag} ."
-			  sh "docker push ${ImageName}"
+			   mvn install dockerfile:build 
+			 //sh "docker build -t ${ImageName}:${imageTag} ."
+			  //sh "docker push ${ImageName}"
 			}
 		}
 		stage ('Push Docker image to DockerHub') {
